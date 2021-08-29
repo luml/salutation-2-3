@@ -1,15 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <SalutationName
+      v-model:salutation.capitalize="form.salutation"
+      v-model:name.capitalize="form.name"
+    ></SalutationName>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { reactive } from "vue";
+import SalutationName from "./components/SalutationName.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    SalutationName,
+  },
+  setup() {
+    const form = reactive({
+      salutation: "",
+      name: "",
+    });
+
+    return {
+      form,
+    };
   },
 };
 </script>
