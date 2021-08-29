@@ -1,20 +1,21 @@
 <template>
-  <div>
-    <label for="">{{ label }}</label>
-    <input
-      v-bind="{
-        ...$attrs,
-        onIuput: (event) => $emit('update:modelValue', $event.target.value),
-      }"
-      type="email"
-      :value="modelValue"
-    />
-  </div>
+  <!-- <div> -->
+  <label for="">{{ label }}</label>
+  <input
+    v-bind="{
+      ...$attrs,
+      onIuput: (event) => $emit('update:modelValue', $event.target.value),
+    }"
+    type="email"
+    :value="modelValue"
+  />
+  <!-- </div> -->
 </template>
 
 <script>
 export default {
-  inheritAttrs: false,
+  //   inheritAttrs: false,
+  emits: [],
   props: {
     modelValue: {
       type: [String, Number],
