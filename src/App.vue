@@ -4,7 +4,13 @@
       v-model:salutation.capitalize="form.salutation"
       v-model:name.capitalize="form.name"
     ></SalutationName>
-    <BaseInput @blur="email = 'blurrr@its.cold'" class="thicc" type="email" v-model="email" label="Email:" />
+    <BaseInput
+      @blur="email = 'blurrr@its.cold'"
+      class="thicc"
+      type="email"
+      v-model="email"
+      label="Email:"
+    />
   </div>
 </template>
 
